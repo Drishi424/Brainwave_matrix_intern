@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector</title>
+    <style>
+        body { font-family: Arial; background-color: #f0f0f0; text-align: center; padding: 50px; }
+        textarea { width: 60%; height: 150px; padding: 10px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>📰 Fake News Detection</h1>
+    <form action="/predict" method="post">
+        <textarea name="news" placeholder="Enter the news article text here..."></textarea><br><br>
+        <button type="submit">Detect</button>
+    </form>
+    {% if prediction %}
+        <h2>Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
